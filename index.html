@@ -5,27 +5,35 @@
         <meta http-equiv="X-UA-Comparible" content="IE-edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Construction Company</title>
+        <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/d64bef50df.js" crossorigin="anonymous"></script>
         
     </head>
     <body>
-       <header class="header">
-        <a href="#" id="logo">MADECC-Construction</a>
-        <navbar class="nav">
-            <a href="#">home</a>
-            <a href="#">gallery</a>
-            <a href="#">about</a>
-            <a href="#">blog</a>
-            <a href="#">contact</a>
-        </navbar>
-        <div class="icon-header">
-            <div id="menu-bar" class="fas fa-bars">Ξ</div>
-            <div id="search-bar" class="fas fa-search-bars">Q</div>
-        </div>
-        <div class="search-form">
-            <input type="search" id="search-form" placeholder="search here">
-        </div>
-    </header>
+        <header class="header">
+            <a href="#" id="logo">MADECC Construction</a>
+            <div class="menu-bar" id="menuBar">
+                <div class="menu-icon" id="menuIcon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu" id="menu">
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="gallery.html" target="_blank">Gallery</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="blogs.html" target="_blank">Blogs</a></li>
+                    <li><a href="service.html" target="_blank">Services</a></li>
+                    <li><a href="contact.html" target="_blank">contact Us</a></li>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="search.....">
+                        <button id="searchButton">search</button>
+                    </div>
+                </ul>
+            </div>
+        </header>
     <div class="background-image">
         <div class="inner-back-text">
             <h1>We are certified Engineers Offering various types of Construction Services<br> 
@@ -36,7 +44,7 @@
             </p>
             <div class="inner-back-btn">
                 <a href="" class="first-btn">Read more</a>
-                <a href="" class="second-btn">View projects</a>
+                <a href="project.html" class="second-btn">View projects</a>
             </div>
         </div>
     </div>
@@ -205,12 +213,14 @@
                         <img src="images/a (4).jpg" alt="">
                     </div>
                 </div>
+                <footer>
+                    <p>&copy 2020-2024 <span>MADECC-Construction</span><br>
+                        All Rights Reserved
+                        <h1><a href="mailto:madecccons@gmail.com" target="_blank">Get-in-touch</a>-with Us</h1>
+                    </p>
+                </footer>
               </div>
-    </body>
-    <footer>
-        <p>&copy 2024 MADECC-Construction<br>
-            All Right Reserved
-        </p>
-    </footer>
-</html>
 
+            <script src="script.js"></script>
+    </body>
+</html>
