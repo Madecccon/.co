@@ -54,13 +54,13 @@ html{
 }
 
 .background-image{
-    background: url(images/1\ \(6\).jpeg);
+    background: url(1\ \(6\).jpeg);
     width: 100%;
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    border-radius: 40px;
+    border-radius: 300px;
 }
 .inner-back-text{
     position: absolute;
@@ -153,7 +153,7 @@ html{
 .chose-us{
     padding: 3rem 7%;
     background-color: turquoise;
-    border-radius: 40px;
+    border-radius: 300px;
 }
 .chose-us h1{
     color: var(--headerclr);
@@ -181,7 +181,7 @@ html{
     gap: 10px;
     flex-wrap: wrap;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 20px;
+    border-radius: 200px;
 }
 .inner-chose{
     flex: 1 1 200px;
@@ -366,7 +366,7 @@ html{
     margin-bottom: 20px;
     padding: 4rem 7%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 60px;
+    border-radius: 200px;
     background-color: #8a82bd;
  }
  footer span{
