@@ -352,21 +352,15 @@ countSpan.textContent = localStorage.getItem('visitorsCount');
     var url = encodeURIComponent('https://madecccon.github.io/.com/');
     
     // Facebook
-    var facebookShareUrl = 'https://www.facebook.com/share/p/7tHE7TNjybfy2uBK/?mibextid=oFDknk' + url;
+    var facebookShareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
     // Twitter
-    var twitterShareUrl = 'https://x.com/KasahReboya?t=gMM55jXxP4MvKGv_t9Ym-Q&s=09' + url;
+    var twitterShareUrl = 'https://twitter.com/intent/tweet?url=' + url;
     // WhatsApp
-    var whatsappShareUrl = 'https://wa.me/message/HLKO6BUR6JCHK1' + url;
-    // WhatsApp
-    var InstagramShareUrl = 'https://www.instagram.com/kasahreboya957?igsh=MTAyeHZ3ZW91OTRsdA==' + url;
-    // WhatsApp
-    var tiktokShareUrl = 'https://www.tiktok.com/@hellomadecconsltd?_r=1&_d=e9954b8m48g8c1&sec_uid=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&share_author_id=7232180793861538822&sharer_language=en&source=h5_m&u_code=e808clhjmm20g3&timestamp=1712163398&user_id=7232180793861538822&sec_user_id=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7345736711064454917&share_link_id=077e0fd9-dd4c-4791-b862-2acf595e4f2a&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1' + url;
-
+    var whatsappShareUrl = 'https://api.whatsapp.com/send?text=' + url;
+    
     // Open share dialogs
     window.open(facebookShareUrl, 'facebook-share-dialog', 'width=626,height=436');
     window.open(twitterShareUrl, 'twitter-share-dialog', 'width=626,height=436');
-    window.open(tiktokShareUrl, 'tiktok-share-dialog', 'width=626,height=436');
-    window.open(instagramShareUrl, 'instagram-share-dialog', 'width=626,height=436');
     window.open(whatsappShareUrl, '_blank');
     
     return false;
