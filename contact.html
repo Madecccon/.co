@@ -292,65 +292,80 @@ input[type="checkbox"] {
         <div id="chat-history"></div>
         <input type="text" id="user-input" placeholder="Type your message here...">
     </div>
-  </footer>
 
-  <!-- Include the live chat bot script here -->
-  <script>
+         <!-- Include the chatbot HTML and CSS styles within the footer section -->
+
+<footer>
+    <div class="container">
+        <p>&copy; 2016-2024 MADECC Construction. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5">Privacy Policy</a></li>
+                <li><a href="https://www.freeprivacypolicy.com/live/039f20d5-f19e-4836-b91e-38fa0ba3ca1a">Terms of Use</a></li>
+                <li><a href="https://www.freeprivacypolicy.com/live/0e51d3eb-b388-4144-bfec-74e9fdfe02f2">cookies Policy</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="chatbot-container">
+        <button id="toggle-chatbot">Chat</button>
+        <div id="chat-history"></div>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+    </div>
+
+     <!-- Include the chatbot JavaScript script within the <script> tag -->
+
+<script>
     // Chatbot responses
-const responses = {
-    "hi": "Hello! How can I assist you today?",
-    "hello": "Hi there! How can I help you?",
-    "how are you": "I'm just a bot, but thanks for asking! How can I assist you?",
-    "bye": "Goodbye! Have a great day.",
-    "thank you": "You're welcome!"
-};
+    const responses = {
+        "hi": "Hello! How can I assist you today?",
+        "hello": "Hi there! How can I help you?",
+        "how are you": "I'm just a bot, but thanks for asking! How can I assist you?",
+        "bye": "Goodbye! Have a great day.",
+        "thank you": "You're welcome!"
+    };
 
-// Function to generate a response
-function getResponse(message) {
-    const lowerCaseMessage = message.toLowerCase();
-    return responses[lowerCaseMessage] || "I'm sorry, I don't understand that. Can you please rephrase?";
-}
+    // Function to generate a response
+    function getResponse(message) {
+        const lowerCaseMessage = message.toLowerCase();
+        return responses[lowerCaseMessage] || "I'm sorry, I don't understand that. Can you please rephrase?";
+    }
 
-// Function to display user message and bot response
-function displayMessage(userMessage, botMessage) {
-    const chatHistory = document.getElementById('chat-history');
-    const userBubble = document.createElement('div');
-    userBubble.className = 'message user-message';
-    userBubble.textContent = userMessage;
-    const botBubble = document.createElement('div');
-    botBubble.className = 'message bot-message';
-    botBubble.textContent = botMessage;
-    chatHistory.appendChild(userBubble);
-    chatHistory.appendChild(botBubble);
-    // Scroll chat history to bottom
-    chatHistory.scrollTop = chatHistory.scrollHeight;
-}
+    // Function to display user message and bot response
+    function displayMessage(userMessage, botMessage) {
+        const chatHistory = document.getElementById('chat-history');
+        const userBubble = document.createElement('div');
+        userBubble.className = 'message user-message';
+        userBubble.textContent = userMessage;
+        const botBubble = document.createElement('div');
+        botBubble.className = 'message bot-message';
+        botBubble.textContent = botMessage;
+        chatHistory.appendChild(userBubble);
+        chatHistory.appendChild(botBubble);
+        // Scroll chat history to bottom
+        chatHistory.scrollTop = chatHistory.scrollHeight;
+    }
 
-// Function to handle user input
-function handleUserInput(event) {
-    if (event.key === 'Enter') {
-        const userInput = event.target.value.trim();
-        if (userInput !== '') {
-            displayMessage(userInput, getResponse(userInput));
-            event.target.value = '';
+    // Function to handle user input
+    function handleUserInput(event) {
+        if (event.key === 'Enter') {
+            const userInput = event.target.value.trim();
+            if (userInput !== '') {
+                displayMessage(userInput, getResponse(userInput));
+                event.target.value = '';
+            }
         }
     }
-}
 
-// Event listener for user input
-document.getElementById('user-input').addEventListener('keydown', handleUserInput);
+    // Event listener for user input
+    document.getElementById('user-input').addEventListener('keydown', handleUserInput);
 
-// Toggle chatbot visibility
-document.getElementById('toggle-chatbot').addEventListener('click', function() {
-    const chatbotContainer = document.getElementById('chatbot-container');
-    chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
-});
-  </script>
-
-
-  <!-- Include the Google Maps script here -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-
+    // Toggle chatbot visibility
+    document.getElementById('toggle-chatbot').addEventListener('click', function() {
+        const chatbotContainer = document.getElementById('chatbot-container');
+        chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
+    });
+</script>
+</footer>
 
   <!-- Include the website visitors count script here -->
   <script>
