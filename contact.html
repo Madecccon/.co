@@ -1,46 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Comparible" content="IE=edge">
-        <meta name="viewport" content="width=device-width", initial-scale="1.0">
-        <title>contact US</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--font awesome cdn link-->
+   <link rel="stylesheet"
+   href="https://fonts.googleapis.com/css?family=Tangerine">
+ <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ <script src="https://kit.fontawesome.com/d64bef50df.js" crossorigin="anonymous"></script>
+  <title>Contact Us</title>
 
-        <!--font awesome cdn link-->
-        <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
-        <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-        <script src="https://kit.fontawesome.com/d64bef50df.js" crossorigin="anonymous"></script>
+           <style>
+            /* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        <!--custom css file link-->
-        <link rel="stylesheet" href="contact.css">
-    </head>
-    <body>
+/* Basic styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
-        <!--header section starts-->
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+}
 
-         <header class="header">
-            <a href="#" class="logo">We<span>Build</span></a>
-            <nav class="navbar">
-                <a href="#home">home</a>
-                <a href="#about">about</a>
-                <a href="#services">services</a>
-                <a href="#projects">projects</a>
-                <a href="#pricing">pricing</a>
-                <a href="#blogs">blogs</a>
-                <a href="#contact">contact</a>
-            </nav>
-            <div class="icons">
-                <div id="menu" class="fas fa-bars"></div>
-                <div id="info-btn" class="fas fa-info-circle"></div>
-                <div id="search-btn" class="fas fa-search"></div>
-                <div id="login-btn" class="fas fa-user"></div>
-            </div>
-         </header>
+header h1 {
+  margin: 0;
+}
 
-        <!--header section starts-->
+nav ul {
+  list-style: none;
+}
 
-        <!--custom js file link-->
-        <script src="contact.js"></script>
-    </body>
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-section {
+  padding: 50px 0;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #555;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer nav ul {
+  display: inline;
+}
+
+footer nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+footer nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+           </style>
+           <style>
+            /* Chatbot button */
+#toggle-chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#chatbot-container {
+  position: fixed;
+  bottom: 100px; /* Adjust as needed */
+  right: 20px;
+  display: none;
+  z-index: 9998;
+}
+
+#chat-history {
+  max-height: 200px; /* Adjust as needed */
+  overflow-y: auto;
+}
+
+           </style>
+           <style>
+            .container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#count {
+  font-size: 18px;
+}
+
+           </style>
+
+           <style>
+            .subscribe-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.subscribe-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.subscribe-section form {
+  display: flex;
+  align-items: center;
+}
+
+.subscribe-section input[type="email"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.subscribe-section button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.subscribe-section button:hover {
+  background-color: #555;
+}
+
+/* Styling for checkboxes */
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+           </style>
+
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>MADECC Construction</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-info">
+        <p><strong>Address:</strong> 123 Carrier Street, Yaounde, Cameroon</p>
+        <p><strong>Email:</strong> madecccons@gmail.com</p>
+        <p><strong>Phone:</strong> +237 683316486</p>
+        <p><strong>Phone:</strong> +237 650320971</p>
+      </div>
+      <div id="map"></div>
+      <form action="mailto:madecccons@gmail.com" method="post" enctype="text/plain">
+        <input type="text" id="name" placeholder="first Name" required>
+        <input type="text" id="name" placeholder="Given Name" required>
+        <input type="text" id="name" placeholder="family name" required>
+        <input type="number" id="phone" placeholder="+237683316489" required>
+        <input type="email" id="email id" placeholder="Email Address" required>
+        <input type="number" id="password" placeholder="78546688....." required>
+        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+        <label for="privacy-policy-checkbox">
+            <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required>
+            I agree to the <a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5" target="_blank" required>Privacy Policy</a>
+          </label>
+          <label for="terms-checkbox">
+            <input type="checkbox" id="terms-checkbox" name="terms" required>
+            I agree to the <a href="https://www.freeprivacypolicy.com/live/039f20d5-f19e-4836-b91e-38fa0ba3ca1a" target="_blank" required>Terms of Use</a>
+          </label>
+          <label for="cookies-checkbox">
+            <input type="checkbox" id="cookies-checkbox" name="terms" required>
+            I agree to the <a href="https://www.freeprivacypolicy.com/live/0e51d3eb-b388-4144-bfec-74e9fdfe02f2" target="_blank" required>cookies Policy</a>
+          </label>
+                 <br>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="subscribe-section">
+    <div class="container">
+      <h2>Subscribe to Our Newsletter</h2>
+      <form id="subscribe-form" action="mailto:madecccons@gmail.com" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Your Email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+
+  <div class="container">
+    <h1>Visitor Count</h1>
+    <p id="count">Total visitors: <span id="visitor-count">0</span></p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2016-2024 MADECC Construction. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5">Privacy Policy</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/039f20d5-f19e-4836-b91e-38fa0ba3ca1a">Terms of Use</a></li>
+          <li><a href="https://www.freeprivacypolicy.com/live/0e51d3eb-b388-4144-bfec-74e9fdfe02f2">cookies Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="chatbot-container">
+        <button id="toggle-chatbot">Chat</button>
+        <div id="chat-history"></div>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+    </div>
+  </footer>
+
+  <!-- Include the live chat bot script here -->
+  <script>
+    // Chatbot responses
+const responses = {
+    "hi": "Hello! How can I assist you today?",
+    "hello": "Hi there! How can I help you?",
+    "how are you": "I'm just a bot, but thanks for asking! How can I assist you?",
+    "bye": "Goodbye! Have a great day.",
+    "thank you": "You're welcome!"
+};
+
+// Function to generate a response
+function getResponse(message) {
+    const lowerCaseMessage = message.toLowerCase();
+    return responses[lowerCaseMessage] || "I'm sorry, I don't understand that. Can you please rephrase?";
+}
+
+// Function to display user message and bot response
+function displayMessage(userMessage, botMessage) {
+    const chatHistory = document.getElementById('chat-history');
+    const userBubble = document.createElement('div');
+    userBubble.className = 'message user-message';
+    userBubble.textContent = userMessage;
+    const botBubble = document.createElement('div');
+    botBubble.className = 'message bot-message';
+    botBubble.textContent = botMessage;
+    chatHistory.appendChild(userBubble);
+    chatHistory.appendChild(botBubble);
+    // Scroll chat history to bottom
+    chatHistory.scrollTop = chatHistory.scrollHeight;
+}
+
+// Function to handle user input
+function handleUserInput(event) {
+    if (event.key === 'Enter') {
+        const userInput = event.target.value.trim();
+        if (userInput !== '') {
+            displayMessage(userInput, getResponse(userInput));
+            event.target.value = '';
+        }
+    }
+}
+
+// Event listener for user input
+document.getElementById('user-input').addEventListener('keydown', handleUserInput);
+
+// Toggle chatbot visibility
+document.getElementById('toggle-chatbot').addEventListener('click', function() {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    chatbotContainer.style.display = chatbotContainer.style.display === 'none' ? 'block' : 'none';
+});
+  </script>
+
+
+  <!-- Include the Google Maps script here -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+
+
+  <!-- Include the website visitors count script here -->
+  <script>
+    // Check if localStorage exists and initialize visitors count
+if (localStorage) {
+  if (!localStorage.getItem('visitorsCount')) {
+    localStorage.setItem('visitorsCount', 1);
+  } else {
+    var count = parseInt(localStorage.getItem('visitorsCount'));
+    localStorage.setItem('visitorsCount', count + 1);
+  }
+}
+// Display visitors count on the webpage
+var countSpan = document.getElementById('visitor-count');
+countSpan.textContent = localStorage.getItem('visitorsCount');
+
+  </script>
+</body>
 </html>
+
+
+
+
+
