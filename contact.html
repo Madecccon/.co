@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!--font awesome cdn link-->
+  <!-- Font Awesome CDN link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
    <link rel="stylesheet"
    href="https://fonts.googleapis.com/css?family=Tangerine">
  <link rel="stylesheet" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -220,9 +221,9 @@ input[type="checkbox"] {
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -311,12 +312,11 @@ input[type="checkbox"] {
         <li><a href="https://wa.me/message/HLKO6BUR6JCHK1"><i class="fab fa-whatsapp"></i></a></li>
         <li><a href="https://www.linkedin.com/in/madecc-cons-4a33ab290?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedln"></i></a></li>
         <li><a href="https://www.youtube.com/@CraftedByMADECC"><i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.tiktok.com/@hellomadecconsltd?_r=1&_d=e9954b8m48g8c1&sec_uid=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&share_author_id=7232180793861538822&sharer_language=en&source=h5_m&u_code=e808clhjmm20g3&timestamp=1712163398&user_id=7232180793861538822&sec_user_id=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7345736711064454917&share_link_id=077e0fd9-dd4c-4791-b862-2acf595e4f2a&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1"><i class="fab fa-tiktok"></i></a></li>
       </ul>
     </nav>
   </div>
-  <div id="chatbot-container">
-    <!-- Your chatbot container content... -->
-  </div>
+        <li><a href="#" onclick="shareWebsite()"><i class="fas fa-share-alt"></i> Share</a></li>
 </footer>
 
   <!-- Include the website visitors count script here -->
@@ -335,6 +335,44 @@ var countSpan = document.getElementById('visitor-count');
 countSpan.textContent = localStorage.getItem('visitorsCount');
 
   </script>
+
+   <script>
+  function shareWebsite() {
+    // Replace 'your-website-url' with your actual website URL
+    var url = 'https://madecccon.github.io/.com/';
+
+    // Open share dialog
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url), 'facebook-share-dialog', 'width=626,height=436');
+    return false;
+  }
+   </script>
+  <script>
+  function shareWebsite() {
+    // Replace 'your-website-url' with your actual website URL
+    var url = encodeURIComponent('https://madecccon.github.io/.com/');
+    
+    // Facebook
+    var facebookShareUrl = 'https://www.facebook.com/share/p/7tHE7TNjybfy2uBK/?mibextid=oFDknk' + url;
+    // Twitter
+    var twitterShareUrl = 'https://x.com/KasahReboya?t=gMM55jXxP4MvKGv_t9Ym-Q&s=09' + url;
+    // WhatsApp
+    var whatsappShareUrl = 'https://wa.me/message/HLKO6BUR6JCHK1' + url;
+    // WhatsApp
+    var InstagramShareUrl = 'https://www.instagram.com/kasahreboya957?igsh=MTAyeHZ3ZW91OTRsdA==' + url;
+    // WhatsApp
+    var tiktokShareUrl = 'https://www.tiktok.com/@hellomadecconsltd?_r=1&_d=e9954b8m48g8c1&sec_uid=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&share_author_id=7232180793861538822&sharer_language=en&source=h5_m&u_code=e808clhjmm20g3&timestamp=1712163398&user_id=7232180793861538822&sec_user_id=MS4wLjABAAAAaRXoKvURScOi1tVIJ_QejKN4lz5kRYj7iDK_5pCRztyjMXbw3wVJK_Sq72t6j517&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7345736711064454917&share_link_id=077e0fd9-dd4c-4791-b862-2acf595e4f2a&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb0229&social_share_type=5&enable_checksum=1' + url;
+
+    // Open share dialogs
+    window.open(facebookShareUrl, 'facebook-share-dialog', 'width=626,height=436');
+    window.open(twitterShareUrl, 'twitter-share-dialog', 'width=626,height=436');
+    window.open(tiktokShareUrl, 'tiktok-share-dialog', 'width=626,height=436');
+    window.open(instagramShareUrl, 'instagram-share-dialog', 'width=626,height=436');
+    window.open(whatsappShareUrl, '_blank');
+    
+    return false;
+  }
+</script>
+
 </body>
 </html>
 
