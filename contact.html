@@ -242,7 +242,49 @@ input[type="checkbox"] {
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+             /* styles.css */
+.website-counter {
+    font-size: 24px;
+    color: #333;
+    /* Add more styles as desired */
+}
+
            </style>
+  <script>
+    // index.js
+document.addEventListener('DOMContentLoaded', () => {
+    const counterContainer = document.querySelector('.website-counter');
+    let visitCount = localStorage.getItem('page_view');
+
+    if (!visitCount) {
+        // Initialize count if not found in localStorage
+        visitCount = 1;
+        localStorage.setItem('page_view', visitCount);
+    } else {
+        // Check if the visitor has already been counted today
+        const lastVisitDate = localStorage.getItem('last_visit_date');
+        const today = new Date().toLocaleDateString();
+
+        if (lastVisitDate !== today) {
+            // Increment count if it's a new day
+            visitCount = Number(visitCount) + 1;
+            localStorage.setItem('page_view', visitCount);
+            localStorage.setItem('last_visit_date', today);
+        }
+    }
+
+    // Display the visitor count
+    counterContainer.textContent = visitCount;
+
+    // Optional: You can also update the count periodically (e.g., every minute)
+    // setInterval(() => {
+    //     visitCount = Number(localStorage.getItem('page_view')) + 1;
+    //     localStorage.setItem('page_view', visitCount);
+    //     counterContainer.textContent = visitCount;
+    // }, 60000); // Update every minute
+});
+
+  </script>
 
 </head>
 <body>
@@ -337,10 +379,9 @@ input[type="checkbox"] {
   </section>
 
 
-  <div class="container">
-    <h1>Visitor Count</h1>
-    <p id="count">Total visitors: <span id="visitor-count">0</span></p>
-  </div>
+ <div>our total visitors:</div>
+    <div class="website-counter"></div>
+              </div>
 
   <footer>
     <div class="container">
@@ -353,11 +394,7 @@ input[type="checkbox"] {
         </ul>
       </nav>
     </div>
-    <div id="chatbot-container">
-        <button id="toggle-chatbot">Chat</button>
-        <div id="chat-history"></div>
-        <input type="text" id="user-input" placeholder="Type your message here...">
-    </div>
+    
   <div class="container">
     <!-- Your footer content -->
     <nav>
@@ -376,7 +413,10 @@ input[type="checkbox"] {
       </ul>
     </nav>
   </div>
-    <h1>Share and Reffer Us to your Friends</h1>
+    <div>our total visitors:</div>
+    <div class="website-counter"></div>
+              </div>
+    <h1>Share and Reffer Us to your Friends:</h1>
         <li><a href="#" onclick="shareWebsite()"><i class="fas fa-share-alt"></i> Share</a></li>
 </footer>
 
