@@ -211,8 +211,8 @@ input[type="checkbox"] {
   font-size: 14px; /* Adjust font size of the follower count */
   color: #888; /* Adjust color of the follower count */
 }
-              /* Basic styling for the form */
-        body {
+                /* Basic styling for the form */
+ body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
         }
@@ -220,7 +220,7 @@ input[type="checkbox"] {
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: #e0dede;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
@@ -274,45 +274,57 @@ input[type="checkbox"] {
         <h2>Contact Us</h2>
         <form action="process_form.php" method="post">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" placeholder="Full name" required>
             <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
+            <input type="text" id="email" placeholder="email Address" required>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" placeholder="password" required>
             <label for="phone">Phone Number:</label>
             <select id="phone" name="phone">
-                <option value="1234567890">123-456-7890</option>
-                <option value="9876543210">987-654-3210</option>
+                <option value="1234567890">+237</option>
+                <option value="9876543210">+1</option>
+                <option value="1234567890">+44</option>
+                <option value="9876543210">+86</option>
+                <option value="1234567890">+61</option>
+                <option value="9876543210">+1</option>
+                <option value="1234567890">+91</option>
+                <option value="9876543210">+234</option>
+                <option value="1234567890">+63</option>
+                <option value="9876543210">+855</option>
+                <option value="1234567890">+56</option>
+                <option value="9876543210">+359</option>
                 <!-- Add more phone number options as needed -->
             </select>
+            <input type="phone" id="phone" placeholder="Telephone" required>
             <label for="country">Country:</label>
             <select id="country" name="country">
                 <option value="USA">United States</option>
                 <option value="CA">Canada</option>
                 <option value="UK">United Kingdom</option>
+                <option value="CM">Cameroon</option>
+                <option value="NG">Nigeria</option>
+                <option value="SA">South Africa</option>
+                <option value="JP">Japan</option>
+                <option value="CH">China</option>
+                <option value="NGR">Niger</option>
                 <!-- Add more country options as needed -->
             </select>
-            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            <textarea id="message" name="message" rows="4" placeholder="HOW CAN WE HELP YOU DEAR CUSTOMER?" required></textarea>
+            <label for="privacy-policy-checkbox">
+              <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required>
+              I agree to the <a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5" target="_blank" required>Privacy Policy</a>
+            </label>
+            <label for="terms-checkbox">
+              <input type="checkbox" id="terms-checkbox" name="terms" required>
+              I agree to the <a href="https://www.freeprivacypolicy.com/live/039f20d5-f19e-4836-b91e-38fa0ba3ca1a" target="_blank" required>Terms of Use</a>
+            </label>
+            <label for="cookies-checkbox">
+              <input type="checkbox" id="cookies-checkbox" name="terms" required>
+              I agree to the <a href="https://www.freeprivacypolicy.com/live/0e51d3eb-b388-4144-bfec-74e9fdfe02f2" target="_blank" required>cookies Policy</a>
+            </label>
             <input type="submit" value="Submit">
         </form>
     </div>
-        <label for="privacy-policy-checkbox">
-            <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required>
-            I agree to the <a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5" target="_blank" required>Privacy Policy</a>
-          </label>
-          <label for="terms-checkbox">
-            <input type="checkbox" id="terms-checkbox" name="terms" required>
-            I agree to the <a href="https://www.freeprivacypolicy.com/live/039f20d5-f19e-4836-b91e-38fa0ba3ca1a" target="_blank" required>Terms of Use</a>
-          </label>
-          <label for="cookies-checkbox">
-            <input type="checkbox" id="cookies-checkbox" name="terms" required>
-            I agree to the <a href="https://www.freeprivacypolicy.com/live/0e51d3eb-b388-4144-bfec-74e9fdfe02f2" target="_blank" required>cookies Policy</a>
-          </label>
-                 <br>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
 
   <section class="subscribe-section">
     <div class="container">
