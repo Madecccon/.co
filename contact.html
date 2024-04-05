@@ -211,6 +211,37 @@ input[type="checkbox"] {
   font-size: 14px; /* Adjust font size of the follower count */
   color: #888; /* Adjust color of the follower count */
 }
+              /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
            </style>
 
 </head>
@@ -239,15 +270,32 @@ input[type="checkbox"] {
         <p><strong>Phone:</strong> +237 650320971</p>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3980.6981717118033!2d11.46903537412142!3d3.874759848265627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcff0d23b430d%3A0x6e5c797f8a468176!2sMADECC%20-%20Construction!5e0!3m2!1sen!2scm!4v1712113238284!5m2!1sen!2scm" width="300" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div id="map"></div>
-      <form action="mailto:madecccons@gmail.com" method="post" enctype="text/plain">
-        <input type="text" id="name" placeholder="first Name" required>
-        <input type="text" id="name" placeholder="Given Name" required>
-        <input type="text" id="name" placeholder="family name" required>
-        <input type="number" id="phone" placeholder="+237683316489" required>
-        <input type="email" id="email id" placeholder="Email Address" required>
-        <input type="number" id="password" placeholder="78546688....." required>
-        <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form action="process_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="phone">Phone Number:</label>
+            <select id="phone" name="phone">
+                <option value="1234567890">123-456-7890</option>
+                <option value="9876543210">987-654-3210</option>
+                <!-- Add more phone number options as needed -->
+            </select>
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="USA">United States</option>
+                <option value="CA">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <!-- Add more country options as needed -->
+            </select>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
         <label for="privacy-policy-checkbox">
             <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required>
             I agree to the <a href="https://www.freeprivacypolicy.com/live/4d1a1a1e-1718-464f-a650-9138c1ef1cd5" target="_blank" required>Privacy Policy</a>
