@@ -1,7 +1,7 @@
-from flask import Flask, render_template
+from gallery_images import gallery_images, render_template
 import os
 
-app = Flask(__name__)
+app = gallery_images(__name__)
 
 def generate_gallery_items(directory):
     gallery_html = ""
